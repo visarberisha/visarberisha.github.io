@@ -1,0 +1,59 @@
+.people{
+    position: relative;
+    height: 10%;
+    width: 49%;
+    border-radius:10px;
+    margin: 0px 0px 5px 0px;
+    float:left;
+}
+
+.peopleDP{
+    position: relative;
+    display: inherit;
+    float: left;
+    margin: 1% 1.5% 1px 5%;
+    margin-top: 5px;
+    height: 20%;
+    width: 20%;
+    border:1px solid #C0C0C0;
+    border-radius: 70px;
+}
+
+.peopleInfo{
+    position: relative;
+    display: inherit;
+       margin: 0px 2.5% 0px 0px;
+     margin-left: -moz-calc(5%+150px);
+    margin-left: -webkit-calc(5%+150px);
+    margin-left: calc(5%+150px);
+    height: 150px;
+
+    padding-top: 10px;
+}
+
+.name{
+    color: #333333;
+    font-size: 17px;
+    margin: 2.5% 0px 0px 0px;
+    text-align: center;
+}
+
+.qualification{
+    color: #333333;
+    font-size: 15px;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+/* Clearfix (clear floats) */
+.row::after {
+content: "";
+clear: both;
+display: table;
+}

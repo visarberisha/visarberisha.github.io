@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Hind+Guntur|Palanquin|Open+Sans');
+p, ul, ol { font-family: 'Palanquin', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
+.professorship { font-family: 'Open Sans', sans-serif; }
+img.rounded-corners {
+  border-radius: 30px;
+}

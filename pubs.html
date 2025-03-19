@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Visar Berisha, PhD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Associate Professor at Arizona State University" />
+    <meta name="keywords" content="Aural Analytics, asu, machine learning, AI, clinical AI, healthcare AI, digital health, diagnosis, voice biomarkers, speech biomarkers, speech analytics, speech AI, natural language processing, health, prognosis, tracking, neurological disease, speech processing, health, signal processing, pattern recognition, speech pathologies, dysarthria, arizona state university, tempe, arizona" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="site.css">
+  </head>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49157441-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <body>
+    <br>
+    <div class="container">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #990033;">
+        <a class="navbar-brand" href="index.html">Visar Berisha</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">About Me</a>
+            <a class="nav-item nav-link" href="research.html">Research</a>
+            <a class="nav-item nav-link" href="pubs.html">Publications</a>
+            <a class="nav-item nav-link" href="group.html">Group</a>
+            <a class="nav-item nav-link" href="support.html">Support</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+    <h2 class="my-3">Publications</h2>
+    Search across all <a href="#journal">journal</a> and <a href="#conference">conference proceedings</a> citations
+    <p><input type="text" id="search" placeholder="Type to search" autocomplete="on" autofocus="" class="form-control"></p>
+    <ul id="myPublications" class="list-group">
+
+    <font size="+3"><li class="list-group-item"><h4 class="my-3"><a id="journal">Journal Publications</a></h4></li></font>
+      <script>
+      function paper(context) {
+        var newElem = document.createElement("li");
+        newElem.className = "list-group-item"
+        newElem.innerHTML = '<b><strong>'+context.title+'</strong></b><br>&nbsp&nbsp'+context.authors+'<br>'
+        if (context.conf){
+          newElem.innerHTML = '<div>' + newElem.innerHTML + '<em>&nbsp&nbsp&nbsp&nbsp'+context.conf+'</em></div>'
+        } else{
+           newElem.innerHTML = '<div>' + newElem.innerHTML + '</div>'}
+        slack_var = '<span class="smallText">Download:</span> &nbsp;<a target="_blank" href='+context.href+'><img src="link.jpg" alt="" height="20"></a>'
+        if (context.code){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.code+' style="text-decoration:none">[Code]</a>'}
+        if (context.package){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.package+' style="text-decoration:none">[Package]</a>'}
+        if (context.ipython){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.ipython+' style="text-decoration:none">[Ipython]</a>'}
+        if (context.poster){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.poster+' style="text-decoration:none">[Poster]</a>'}
+        if (context.slides){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.slides+' style="text-decoration:none">[Slides]</a>'}
+        if (context.talk){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.talk+' style="text-decoration:none">[Talk]</a>'}
+        if (context.blog){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.blog+' style="text-decoration:none">[News]</a>'}
+        if (context.page){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.page+' style="text-decoration:none">[Project Page]</a>'}
+        if (context.demo){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.demo+' style="text-decoration:none">[Demo]</a>'}
+          if (context.supp){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.supp+' style="text-decoration:none">[Supp]</a>'}
+          if (context.news){
+          slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.news+' style="text-decoration:none">[News]</a>'}
+
+
+        newElem.innerHTML = newElem.innerHTML + '<div class = "download">' + slack_var + '</div>'
+        var container = document.getElementById("myPublications");
+        container.appendChild(newElem);
+      }
+
+      context = {title:"(2023) A speech-based prognostic model for dysarthria progression in ALS.",
+        authors:"Stegmann, G., Charles, S., Liss, J., Shefner, J., Rutkove, S., Berisha, V.",
+        href:"https://www.tandfonline.com/doi/full/10.1080/21678421.2023.2222144",
+        conf:"(Journal) Amyotrophic Lateral Sclerosis and Frontotemporal Degeneration",
+        }
+        paper(context)
+
+
+      context = {title:"(2023) Language Analytics for Assessment of Mental Health Status and Functional Competency.",
+        authors:"Voleti, R., Woolridge, S., Liss, J., Milanovic, M., Stegmann, G., Hahn, S., Harvey, P., Patterson, T., Bowie, C., Berisha, V.",
+        href:"https://academic.oup.com/schizophreniabulletin/article/49/Supplement_2/S183/7083532",
+        conf:"(Journal) Schizophrenia Bulletin",
+        }
+        paper(context)
+
+
+      context = {title:"(2023) Robust Vocal Quality Feature Embeddings for Dysphonic Voice Detection.",
+        authors:"Zhang, J., Liss, J., Jayasuriya, S. and Berisha, V.",
+        href:"https://arxiv.org/abs/2211.09858",
+        conf:"(Journal) IEEE/ACM Transactions on Audio, Speech, and Language Processing",
+        }
+        paper(context)
+
+      context = {title:"(2023) Speech Entrainment in Adolescent Conversations: A Developmental Perspective.",
+        authors:"Wynn, C., Barrett, T., Berisha, V., Liss, J., Borrie, S.",
+        href:"https://pubmed.ncbi.nlm.nih.gov/37071795/",
+        conf:"(Journal) Journal of Speech, Language, and Hearing Research",
+        }
+        paper(context)
+
+      context = {title:"(2023) Dysarthria Detection Based on a Deep Learning Model with a Clinically-Interpretable Layer.",
+        authors:"Xu, L., Liss, J., Berisha, V.",
+        href:"https://pubs.aip.org/asa/jel/article/3/1/015201/2876594/Dysarthria-detection-based-on-a-deep-learning",
+        conf:"(Journal) Journal of the Acoustical Society of America",
+        }
+        paper(context)
+
+        context = {title:"(2023) Questionnaire and structural imaging data accurately predict headache improvement in patients with acute post-traumatic headache attributed to mild traumatic brain injury.",
+        authors:"Mao, L., Li, J., Schwedt, T., Berisha, V., Nikjou, D., Wu, T., Dumkrieger, G., Ross, K., Chong, C.",
+        href:"https://journals.sagepub.com/doi/full/10.1177/03331024231172736",
+        conf:"(Journal) Cephalalgia",
+        }
+        paper(context)
+
+
+        context = {title:"(2023) Developing multivariable models for predicting headache improvement in patients with acute post-traumatic headache attributed to mild traumatic brain injury: A preliminary study.",
+        authors:"Mao, L., Dumkrieger, G., Dohyun, K., Ross, K.,  Berisha, V., Schwedt, T., Li, J., Chong, C.",
+        href:"https://headachejournal.onlinelibrary.wiley.com/doi/full/10.1111/head.14450?casa_token=jF8KrtOPT78AAAAA%3A0U8xgw0JqNnyVUta8eT_X7mjRcSWFYQvsppWKgdf-EBgEz8j2ACLlBbA5j9VR-UTox_YQmvv8xwh-A",
+        conf:"(Journal) The Journal of Head and Face Pain",
+        }
+        paper(context)
+
+
+      context = {title:"(2022) The Value of Brain MRI Functional Connectivity Data in a Machine Learning Classifier for Distinguishing Migraine from Persistent Post-traumatic Headache.",
+        authors:"Dumkrieger, G., Chong, C.,  Ross, K., Berisha, V.,  Schwedt, T.",
+        href:"https://pubmed.ncbi.nlm.nih.gov/36700144/",
+        conf:"(Journal) Frontiers in Pain Research",
+        }
+        paper(context)
+
+        context = {title:"(2022) Consonant-Vowel Transition Models Based on Deep Learning for Objective Evaluation of Articulation.",
+          authors:"Mathad, V., Liss, J., Chapman, K., Scherer, N., Berisha, V.",
+          href:"https://ieeexplore.ieee.org/document/9915287",
+          conf:"(Journal) IEEE/ACM Transactions on Audio, Speech, and Language Processing",
+          }
+          paper(context)
+      context = {title:"(2022) Automated semantic relevance as an indicator of cognitive decline: Out‐of‐sample validation on a large‐scale longitudinal dataset.",
+        authors:"Stegmann, G., Hahn, S., Bhandari, S., Kawabata, K., Shefner, J., Duncan, C.J., Liss, J., Berisha, V. and Mueller, K.",
+        href:"https://alz-journals.onlinelibrary.wiley.com/doi/full/10.1002/dad2.12294",
+        conf:"(Journal) Alzheimer's and Dementia: Diagnosis, Assessment, and Disease Monitoring",
+        }
+        paper(context)
+      context = {title:"(2022) Unsupervised EEG channel selection based on nonnegative matrix factorization",
+        authors:"Xu, L., Chavez-Echeagaray, M., Berisha, V.",
+        href:"https://www.sciencedirect.com/science/article/pii/S1746809422002221",
+        conf:"(Journal) Biomedical Signal Processing and Control",
+        }
+        paper(context)
+
+        context = {title:"(2021) Altered Speech Patterns in Subjects with Post-Traumatic Headache Due to Mild Traumatic Brain Injury",
+          authors:"Chong, C., Zhang, J., Li, J., Wu, T., Dumkrieger, G., Nikolova, S., Ross, K., Stegmann, G., Liss, J., Schwedt, T.J. and Jayasuriya, S., Berisha, V. ",
+          href:"https://thejournalofheadacheandpain.biomedcentral.com/articles/10.1186/s10194-021-01296-6",
+          conf:"(Journal) The Journal of Headache and Pain"
+          }
+        paper(context)
+        context = {title:"(2021) Analyzing the relationship between productivity and human communication in an organizational setting",
+          authors:"Dutta, A., Steiner, E., Proulx, J., Berisha, V., Bliss, D.W., Poole, S. and Corman, S.",
+          href:"https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0250301",
+          conf:"(Journal) (Journal) PLOS One",
+          }
+        paper(context)
+        context = {title:"(2021) Estimation of forced vital capacity using speech acoustics in patients with ALS",
+          authors:"Stegmann, G.M., Hahn, S., Duncan, C.J., Rutkove, S.B., Liss, J., Shefner, J.M. and Berisha, V.",
+          href:"https://pubmed.ncbi.nlm.nih.gov/34348537/",
+          conf:"(Journal) Amyotrophic Lateral Sclerosis and Frontotemporal Degeneration",
+          }
+        paper(context)
+        context = {title:"(2021) Spatio-Semantic Graphs From Picture Description: Applications to Detection of Cognitive Impairment",
+          authors:"Ambadi, P.S., Basche, K., Koscik, R.L., Berisha, V., Liss, J.M. and Mueller, K.D.",
+          href:"https://www.frontiersin.org/articles/10.3389/fneur.2021.795374/full",
+          conf:"(Journal) Frontiers in Neurology"
+          }
+          paper(context)
+          context = {title:"(2021) Digital medicine and the curse of dimensionality",
+            authors:"Berisha, V., Krantsevich, C., Hahn, P. R., Hahn, S., Dasarathy, G., Turaga, P., & Liss, J.",
+            href:"https://www.nature.com/articles/s41746-021-00521-5",
+            conf:"(Journal) Nature npj Digital Medicine"
+            }
+            paper(context)
+            context = {title:"(2021) T2* reduction in patients with acute post-traumatic headache",
+              authors:"Nikolova, S., Schwedt, T.J., Li, J., Wu, T., Dumkrieger, G.M., Ross, K.B., Berisha, V. and Chong, C.D.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/34644192/",
+              conf:"(Journal) Cephalalgia"
+              }
+            paper(context)
+            context = {title:"(2021) Distinguishing persistent post-traumatic headache from migraine: Classification based on clinical symptoms and brain structural MRI",
+              authors:"Chong, C.D., Berisha, V., Ross, K., Kahn, M., Dumkrieger, G. and Schwedt, T.J.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/33926241/",
+              conf:"(Journal) Cephalalgia"
+              }
+            paper(context)
+            context = {title:"(2021) From Speech Acoustics to Communicative Participation in Dysarthria: Toward a Causal Framework",
+              authors:"Borrie, S.A., Wynn, C.J., Berisha, V. and Barrett, T.S.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/34958608/",
+              conf:"(Journal) Journal of Speech, Language, and Hearing Research"
+              }
+            paper(context)
+            context = {title:"(2021) A Deep Learning Algorithm for Objective Assessment of Hypernasality in Children with Cleft Palate",
+              authors:"Mathad, V., Scherer, N., Chapman, K., Liss, J. and Berisha, V.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/33566756/",
+              conf:"(Journal) IEEE Transactions on Biomedical Engineering"
+              }
+            paper(context)
+            context = {title:"(2021) Healthy communication partners modify their speech when conversing with individuals with Parkinson’s disease",
+              authors:"Lubold, N., Willi, M., Barrett, T., Borrie, S., Berisha, V.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/33831330/",
+              conf:"(Journal) Journal of Speech, Language, and Hearing Research"
+              }
+            paper(context)
+            context = {title:"(2021) Revisiting the accuracy problem in network analysis using a unique dataset",
+              authors:"Corman, S.R., Steiner, E., Proulx, J.D., Dutta, A., Yahja, A., Poole, M.S., Berisha, V. and Bliss, D.W.B.",
+              href:"https://www.sciencedirect.com/science/article/abs/pii/S037887332030109X",
+              conf:"(Journal) Social Networks"
+              }
+            paper(context)
+            context = {title:"(2021) Performance of forced-alignment algorithms on children’s speech",
+              authors:"Mahr, T., Berisha, V., Kawabata, K., Liss, J. and Hustad, K.",
+              href:"https://pubs.asha.org/doi/abs/10.1044/2020_JSLHR-20-00268?af=R",
+              conf:"(Journal) Journal of Speech, Language, and Hearing Research"
+              }
+            paper(context)
+            context = {title:"(2021) Headache Characteristics and Psychological Factors Associated with Functional Impairment in Individuals with Persistent Posttraumatic Headache",
+              authors:"Peña, A., Dumkrieger, G., Berisha, V., Ross, K., Chong, C.D. and Schwedt, T.J.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/33432362/",
+              conf:"(Journal) Pain Medicine"
+              }
+            paper(context)
+
+            context = {title:"(2020) Conversational Coordination of Articulation Responds to Context: A Clinical Test Case With Traumatic Brain Injury",
+              authors:"Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A. and Barrett, T.S.",
+              href:"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7872735/",
+              conf:"(Journal) Journal of Speech, Language, and Hearing Research"
+              }
+            paper(context)
+            context = {title:"(2020) Repeatability of Commonly Used Speech and Language Features for Clinical Applications",
+              authors:"Stegmann, G.M., Hahn, S., Liss, J., Shefner, J., Rutkove, S.B., Kawabata, K., Bhandari, S., Shelton, K., Duncan, C.J. and Berisha, V.",
+              href:"https://www.karger.com/Article/FullText/511671",
+              conf:"(Journal) Digital Biomarkers"
+              }
+            paper(context)
+            context = {title:"(2020) Improved ALS clinical trials through frequent at‐home self‐assessment: a proof of concept study",
+              authors:"Rutkove, S.B., Narayanaswami, P., Berisha, V., Liss, J., Hahn, S., Shelton, K., Qi, K., Pandeya, S. and Shefner, J.M.",
+              href:"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7359124/",
+              conf:"(Journal) Annals of Clinical and Translational Neurology"
+              }
+            paper(context)
+            context = {title:"(2020) Early detection and tracking of bulbar changes in ALS via frequent and remote speech analysis",
+              authors:"Stegmann, G.M., Hahn, S., Liss, J., Shefner, J., Rutkove, S., Shelton, K., Duncan, C.J. and Berisha, V.",
+              href:"https://www.nature.com/articles/s41746-020-00335-x",
+              conf:"(Journal) Nature npj Digital Medicine"
+              }
+            paper(context)
+            context = {title:"(2020) Robust Estimation of Hypernasality in Dysarthria With Acoustic Model Likelihood Features",
+              authors:"Saxon, M., Tripathi, A., Jiao, Y., Liss J.M., and Berisha, V.",
+              href:"https://ieeexplore.ieee.org/document/9162481",
+              conf:"(Journal) IEEE/ACM Transactions on Audio, Speech, and Language Processing"
+              }
+            paper(context)
+            context = {title: "(2020) A 8.93 TOPS/W LSTM Recurrent Neural Network Accelerator Featuring Hierarchical Coarse-Grain Sparsity for On-Device Speech Recognition",
+              authors:"Kadetotad, D., Berisha, V., Chakrabarti, C., Seo, J.",
+              href:"https://ieeexplore.ieee.org/document/9094675",
+              conf:"(Journal) IEEE Journal of Solid State Circuits"
+              }
+            paper(context)
+            context = {title: "(2020) Clinical Correlates of Insomnia in Patients with Persistent Post-Traumatic Headache Compared with Migraine",
+              authors:"Kim, SK, Chong, C, Dumkrieger, G., Ross, K., Berisha, V., Schwedt, T.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/32295535/",
+              conf:"(Journal) The Journal of Headache and Pain"
+              }
+            paper(context)
+
+            context = {title:"(2019) A Review of Automated Speech and Language Features for Assessment of Cognitive and Thought Disorders",
+              authors:"Voleti, R., Liss, J.M. and Berisha, V.",
+              href:"https://ieeexplore.ieee.org/document/8894069",
+              conf:"(Journal) IEEE Journal of Selected Topics in Signal Processing"
+              }
+            paper(context)
+            context = {title:"(2019) Articulation constrained learning with application to speech emotion recognition",
+              authors:"Shah, M., Tu, M., Berisha, V., Chakrabarti, C., and Spanias, A.",
+              href:"https://asmp-eurasipjournals.springeropen.com/articles/10.1186/s13636-019-0157-9",
+              conf:"(Journal) EURASIP Journal on Audio, Speech, and Music Processing"
+              }
+            paper(context)
+            context = {title:"(2019) Syncing Up for a Good Conversation: A Clinically Meaningful Methodology for Capturing Conversational Entrainment in the Speech Domain",
+              authors:"Borrie, S. A., Barrett, T. S., Willi, M., and Berisha, V.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/30950701/",
+              conf:"(Journal) Journal of Speech, Language, and Hearing Research"
+              }
+            paper(context)
+
+            context = {title:"(2019) Sync Pending: Characterizing Conversational Entrainment in Dysarthria Using a Multidimensional, Clinically Informed Approach",
+              authors:"Borrie, S. A., Barrett, T. S., Liss, J. M., & Berisha, V.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/31855608/",
+              conf:"(Journal) Journal of Speech, Language, and Hearing Research"
+              }
+            paper(context)
+
+            context = {title:"(2019) Objective Intelligibility Assessment by Automated Segmental and Suprasegmental Listening Error Analysis",
+              authors:"Jiao, Y., LaCross, A., Berisha, V., and Liss, J.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/31525112/",
+              conf:"(Journal) Journal of Speech, Language, and Hearing Research"
+              }
+            paper(context)
+
+            context = {title:"(2019) Static and dynamic functional connectivity differences between migraine and persistent post-traumatic headache: A resting-state magnetic resonance imaging study",
+              authors:"Dumkrieger, G., Chong, C. D., Ross, K., Berisha, V., and Schwedt, T. J.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/31042064/",
+              conf:"(Journal) Cephalalgia"
+              }
+            paper(context)
+
+            context = {title:"(2019) Altered speech with migraine attacks: A prospective, longitudinal study of episodic migraine without aura",
+              authors:"Schwedt, T. J., Peplinski, J., Garcia-Filion, P., and Berisha, V.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/30449150/",
+              conf:"(Journal) Cephalalgia"
+              }
+            paper(context)
+
+            context = {title:"(2019) Differences in fibertract profiles between patients with migraine and those with persistent post-traumatic headache",
+              authors:"Chong, C. D., Peplinski, J., Berisha, V., Ross, K., and Schwedt, T. J.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/30913910/",
+              conf:"(Journal) Cephalalgia"
+              }
+            paper(context)
+
+            context = {title:"(2019) ALS longitudinal studies with frequent data collection at home: study design and baseline data",
+              authors:"Rutkove, S. B., Qi, K., Shelton, K., Liss, J., Berisha, V., and Shefner, J. M.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/30486680/",
+              conf:"(Journal) Amyotrophic Lateral Sclerosis and Frontotemporal Degeneration"
+              }
+            paper(context)
+
+            context = {title:"(2018) The effects of speech compression algorithms on the intelligibility of two individuals with dysarthric speech",
+              authors:"Utianski, R., Sandoval, S., Berisha, V., Lansford, K., and Liss, J.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/30515518/",
+              conf:"(Journal) American Journal of Speech-Language Pathology"
+              }
+            paper(context)
+
+            context = {title:"(2018) Symptoms of Autonomic Dysfunction Among Those With Persistent Posttraumatic Headache Attributed to Mild Traumatic Brain Injury: A Comparison to Migraine and Healthy Controls",
+              authors:"Howard, L., Dumkrieger, G., Chong, C. D., Ross, K., Berisha, V., & Schwedt, T. J.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/30156267/",
+              conf:"(Journal) Headache: The Journal of Head and Face Pain"
+              }
+            paper(context)
+
+            context = {title:"(2018) Structural neural predictors of Farsi-English bilingualism",
+              authors:"Berisha, V., Gilton, D., Baxter, L., Corman, S., Blais, C., Brewer, G., Ruston, S., Ball, H., Peter, B., Wingert, K., and Rogalsky, C.",
+              href:"https://www.sciencedirect.com/science/article/abs/pii/S0093934X17301177",
+              conf:"(Journal) Brain and Language"
+              }
+            paper(context)
+
+            context = {title:"(2018) Structural neural predictors of Farsi-English bilingualism",
+              authors:"Berisha, V., Gilton, D., Baxter, L., Corman, S., Blais, C., Brewer, G., Ruston, S., Ball, H., Peter, B., Wingert, K., and Rogalsky, C.",
+              href:"https://www.sciencedirect.com/science/article/abs/pii/S0093934X17301177",
+              conf:"(Journal) Brain and Language"
+              }
+            paper(context)
+
+            context = {title:"(2017) Direct estimation of density functionals using a polynomial basis",
+              authors:"Wisler, A., Berisha, V., Spanias, A., and Hero, A. O.",
+              href:"https://ieeexplore.ieee.org/document/8120107",
+              conf:"(Journal) IEEE Transactions on Signal Processing"
+              }
+            paper(context)
+
+            context = {title:"(2017) Persistent post-traumatic headache vs. migraine: an MRI study demonstrating differences in brain structure",
+              authors:"Schwedt, T. J., Chong, C. D., Peplinski, J., Ross, K., and Berisha, V.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/28831776/",
+              conf:"(Journal) The journal of headache and pain"
+              }
+            paper(context)
+
+            context = {title:"(2017) Longitudinal changes in linguistic complexity among professional football players",
+              authors:"Berisha, V., Wang, S., LaCross, A., Liss, J., and Garcia-Filion, P.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/28327371/",
+              conf:"(Journal) Brain and Language"
+              }
+            paper(context)
+
+            context = {title:"(2017) Improving efficiency in sparse learning with the feedforward inhibitory motif",
+              authors:"Xu, Z., Skorheim, S., Tu, M., Berisha, V., Yu, S., Seo, J. S., and Cao, Y.",
+              href:"https://www.sciencedirect.com/science/article/abs/pii/S092523121730824X",
+              conf:"(Journal) Neurocomputing"
+              }
+            paper(context)
+
+            context = {title:"(2017) Acoustic and perceptual speech characteristics of native Mandarin speakers with Parkinson's disease",
+              authors:"Hsu, S. C., Jiao, Y., McAuliffe, M. J., Berisha, V., Wu, R. M., and Levy, E. S.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/28372040/",
+              conf:"(Journal) The Journal of the Acoustical Society of America"
+              }
+            paper(context)
+
+            context = {title:"(2017) Articulation entropy: An unsupervised measure of articulatory precision",
+              authors:"Jiao, Y., Berisha, V., Liss, J., Hsu, S. C., Levy, E., and McAuliffe, M.",
+              href:"https://ieeexplore.ieee.org/document/7762745",
+              conf:"(Journal) IEEE Signal Processing Letters"
+              }
+            paper(context)
+
+            context = {title:"(2016) The role of stress and word size in Spanish speech segmentation",
+              authors:"LaCross, A., Liss, J., Barragan, B., Adams, A., Berisha, V., McAuliffe, M., and Fromont, R.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/28040010/",
+              conf:"(Journal) The Journal of the Acoustical Society of America"
+              }
+            paper(context)
+
+
+            context = {title:"(2016) The relationship between perceptual disturbances in dysarthric speech and automatic speech recognition performance",
+              authors:"Tu, M., Wisler, A., Berisha, V., and Liss, J. M.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/27908075/",
+              conf:"(Journal) The Journal of the Acoustical Society of America"
+              }
+            paper(context)
+
+            context = {title:"(2016) Experiments on auditory-visual perception of sentences by users of unilateral, bimodal, and bilateral cochlear implants",
+              authors:"Dorman, M. F., Liss, J., Wang, S., Berisha, V., Ludwig, C., and Natale, S. C.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/27960006/",
+              conf:"(Journal) Journal of Speech, Language, and Hearing Research"
+              }
+            paper(context)
+
+            context = {title:"(2016) Modeling listener perception of speaker similarity in dysarthria",
+              authors:"Lansford, K. L., Berisha, V., and Utianski, R. L.",
+              href:"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6910020/",
+              conf:"(Journal) The Journal of the Acoustical Society of America"
+              }
+            paper(context)
+
+            context = {title: "(2016) Empirically estimable classification bounds based on a nonparametric divergence measure",
+              authors:"Berisha, V., Wisler, A., Hero, A. O., and Spanias, A.",
+              href:"https://ieeexplore.ieee.org/document/7254229",
+              conf:"(Journal) IEEE Transactions on Signal Processing"
+              }
+            paper(context)
+
+            context = {title: "(2015) Convex weighting criteria for speaking rate estimation",
+              authors:"Jiao, Y., Berisha, V., Tu, M., and Liss, J.",
+              href:"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4497798/",
+              conf:"(Journal) IEEE/ACM transactions on audio, speech, and language processing"
+              }
+            paper(context)
+
+            context = {title: "(2015) Tracking discourse complexity preceding Alzheimer's disease diagnosis: a case study comparing the press conferences of presidents Ronald Reagan and George Herbert Walker Bush",
+              authors:"Berisha, V., Wang, S., LaCross, A., and Liss, J. ",
+              href:"https://pubmed.ncbi.nlm.nih.gov/25633673/",
+              conf:"(Journal) Journal of Alzheimer's Disease"
+              }
+            paper(context)
+
+            context = {title: "(2015) Empirical non-parametric estimation of the Fisher Information",
+              authors:"Berisha, V. and Hero, A. O.",
+              href:"https://ieeexplore.ieee.org/document/6975144",
+              conf:"(Journal) IEEE Signal Processing Letters"
+              }
+            paper(context)
+
+            context = {title: "(2015) Temporal lobe cortical thickness correlations differentiate the migraine brain from the healthy brain",
+              authors:"Schwedt, T. J., Berisha, V., and Chong, C. D.",
+              href:"https://pubmed.ncbi.nlm.nih.gov/25679805/",
+              conf:"(Journal) PLoS One"
+              }
+            paper(context)
+
+            context = {title: "(2015) Active data labeling for improved classifier generalizability",
+              authors:"Berisha, V. and Cochran, D.",
+              href:"https://www.sciencedirect.com/science/article/abs/pii/S016516841400437X",
+              conf:"(Journal) Signal Processing"
+              }
+            paper(context)
+
+            context = {title: "(2014) Characterizing the distribution of the quadrilateral vowel space area",
+              authors:"Berisha, V., Sandoval, S., Utianski, R., Liss, J. and Spanias, A.",
+              href:"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3985878/",
+              conf:"(Journal) The Journal of the Acoustical Society of America"
+              }
+            paper(context)
+
+            context = {title: "(2013) Automatic assessment of vowel space area",
+              authors:"Sandoval, S., Berisha, V., Utianski, R. L., Liss, J. M. and Spanias, A.",
+              href:"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3820657/",
+              conf:"(Journal) The Journal of the Acoustical Society of America"
+              }
+            paper(context)
+
+            context = {title: "(2009) A frequency/detector pruning approach for loudness estimation",
+              authors:"Krishnamoorthi, H., Spanias, A. and Berisha, V.",
+              href:"https://ieeexplore.ieee.org/document/5175276",
+              conf:"(Journal) IEEE Signal Processing Letters"
+              }
+            paper(context)
+
+            context = {title: "(2009) Experiments with sensor motes and Java-DSP",
+              authors:"Kwon, H., Berisha, V., Atti, V., and Spanias, A.",
+              href:"https://ieeexplore.ieee.org/document/4909475",
+              conf:"(Journal) IEEE Transactions on Education"
+              }
+            paper(context)
+
+            context = {title: "(2008) Gradient projection-based channel equalization under sustained fading",
+              authors:"Atti, V., Spanias, A., Tsakalis, K., Panayiotou, C., Iasemidis, L., & Berisha, V",
+              href:"https://www.sciencedirect.com/science/article/abs/pii/S0165168407002575",
+              conf:"(Journal) Signal Processing"
+              }
+            paper(context)
+
+            context = {title: "(2007) Wideband speech recovery using psychoacoustic criteria",
+              authors:"Berisha, V. and Spanias, A.",
+              href:"https://asmp-eurasipjournals.springeropen.com/articles/10.1155/2007/16816",
+              conf:"(Journal) EURASIP Journal on Audio, Speech, and Music Processing"
+              }
+            paper(context)
+
+            context = {title: "(2007) Interfacing Java-DSP with a TI DSK for use in a signal processing class",
+              authors:"Spanias, A., Huang, C. W., Natarajan, A., Ferzli, R., Kwon, H., Atti, V., Berisha, V. and Misra, S.",
+              href:"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwj6pZKjxpb4AhVWEEQIHQuvAhoQFnoECAwQAQ&url=https%3A%2F%2Fpeer.asee.org%2Finterfacing-j-dsp-with-a-ti-dsk-for-use-in-a-signal-processing-class.pdf&usg=AOvVaw2i2k4HP325mEUuwwVsZh8M",
+              conf:"(Journal) Computers in Education Journal"
+              }
+            paper(context)
+
+      </script>
+
+
+
+
+<font size="+3"><li class="list-group-item"><h4 class="my-3"><a id="conference">Select Conference Proceedings Publications</a></h4></li></font>
+<script>
+function paper(context) {
+  var newElem = document.createElement("li");
+  newElem.className = "list-group-item"
+  newElem.innerHTML = '<b><strong>'+context.title+'</strong></b><br>&nbsp&nbsp'+context.authors+'<br>'
+  if (context.conf){
+    newElem.innerHTML = '<div>' + newElem.innerHTML + '<em>&nbsp&nbsp&nbsp&nbsp'+context.conf+'</em></div>'
+  } else{
+     newElem.innerHTML = '<div>' + newElem.innerHTML + '</div>'}
+  slack_var = '<span class="smallText">Download:</span> &nbsp;<a target="_blank" href='+context.href+'><img src="link.jpg" alt="" height="20"></a>'
+  if (context.code){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.code+' style="text-decoration:none">[Code]</a>'}
+  if (context.package){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.package+' style="text-decoration:none">[Package]</a>'}
+  if (context.ipython){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.ipython+' style="text-decoration:none">[Ipython]</a>'}
+  if (context.poster){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.poster+' style="text-decoration:none">[Poster]</a>'}
+  if (context.slides){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.slides+' style="text-decoration:none">[Slides]</a>'}
+  if (context.talk){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.talk+' style="text-decoration:none">[Talk]</a>'}
+  if (context.blog){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.blog+' style="text-decoration:none">[News]</a>'}
+  if (context.page){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.page+' style="text-decoration:none">[Project Page]</a>'}
+  if (context.demo){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.demo+' style="text-decoration:none">[Demo]</a>'}
+    if (context.supp){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.supp+' style="text-decoration:none">[Supp]</a>'}
+    if (context.news){
+    slack_var = slack_var + '&nbsp;&nbsp;<a target="_blank" href='+context.news+' style="text-decoration:none">[News]</a>'}
+
+
+  newElem.innerHTML = newElem.innerHTML + '<div class = "download">' + slack_var + '</div>'
+  var container = document.getElementById("myPublications");
+  container.appendChild(newElem);
+}
+
+context = {authors:"Hsu, L.,  Berisha, V.",
+title:"(2023) Does human speech follow Benford's Law?",
+href:"https://ieeexplore.ieee.org/document/10094603",
+conf:"Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Xu, L., Mueller, K., Liss, J., Berisha, V.",
+title:"(2023) Decorrelating Language Model Embeddings for Speech-Based Prediction of Cognitive Impairment",
+href:"https://ieeexplore.ieee.org/document/10097265",
+conf:"Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Berisha, V.,  Krantsevich, C.,  Stegmann, G.,  Hahn, S., Liss, J.",
+title:"(2022) Are reported accuracies in the clinical speech machine learning literature overoptimistic?",
+href:"https://www.isca-speech.org/archive/pdfs/interspeech_2022/berisha22_interspeech.pdf",
+conf:"Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Tran, K.,  Xu, L., Stegmann, G.,  Liss, J.,  Berisha, V.,  Utianski, R.",
+title:"(2022) Investigating the Impact of Speech Compression on the Acoustics of Dysarthric Speech",
+href:"https://www.isca-speech.org/archive/pdfs/interspeech_2022/tran22c_interspeech.pdf",
+conf:"Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Li, W., Dasarathy, G., Ramamurthy, K. and Berisha, V.",
+title:"(2022) A label efficient two-sample test",
+href:"https://arxiv.org/pdf/2111.08861.pdf",
+conf:"Proceedings of UAI"
+}
+paper(context)
+
+
+context = {authors:"Mathad, V.C., Scherer, N., Chapman, K., Liss, J. and Berisha, V.",
+title:"(2021) An Attention Model for Hypernasality Prediction in Children with Cleft Palate",
+href:"",
+conf:"Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Mathad, V.C., Mahr, T.J., Scherer, N., Chapman, K., Hustad, K.C., Liss, J. and Berisha, V.",
+title:"(2021) The impact of forced-alignment errors on automatic pronunciation evaluation",
+conf:"Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Li, W., Dasarathy, G., Ramamurthy, K.N. and Berisha, V.",
+title:"(2020) Finding the Homology of Decision Boundaries with Active Learning",
+href:"",
+conf:"Proceedings of NeurIPS"
+}
+paper(context)
+
+
+context = {authors:"Moore, M., Papreja, P., Saxon, M., Berisha, V. and Panchanathan, S.",
+title: "(2020) UncommonVoice: A Crowdsourced Dataset of Dysphonic Speech",
+conf: "Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Kadetotad, D., Meng, J., Berisha, V., Chakrabarti, C. and Seo, J.S.",
+title: "(2020) Compressing LSTM Networks with Hierarchical Coarse-Grain Sparsity",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Mathad, V.C., Chapman, K., Liss, J., Scherer, N. and Berisha, V.",
+title: "(2020) Deep Learning Based Prediction of Hypernasality for Clinical Applications",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Li, W., Dasarathy, G., & Berisha, V.",
+title: "(2020) Regularization via Structural Label Smoothing",
+conf:"(Conference) Proceedings of AISTATS"
+}
+paper(context)
+
+context = {authors:"Lubold, N., Borrie, S. A., Barrett, T. S., Willi, M., & Berisha, V.",
+title: "(2019) Do Conversational Partners Entrain on Articulatory Precision?",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Voleti, R., Woolridge, S., Liss, J. M., Milanovic, M., Bowie, C. R., & Berisha, V.",
+title: "(2019) Objective Assessment of Social Skills Using Automated Language Analysis for Identification of Schizophrenia and Bipolar Disorder",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Xiong, Y., Berisha, V., & Chakrabarti, C.",
+title: "(2019) Residual+ Capsule Networks (ResCap) for Simultaneous Single-Channel Overlapped Keyword Recognition",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Moore, M., *Saxon, M., Venkateswara, H., Berisha, V., & Panchanathan, S.",
+title: "(2019) Say what? A dataset for exploring the error patterns that two ASR engines make",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Saxon, M., Liss, J., & Berisha, V.",
+title: "(2019) Objective Measures of Plosive Nasalization in Hypernasal Speech",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Voleti, R., Liss, J. M., & Berisha, V.",
+title: "(2019) Investigating the Effects of Word Substitution Errors on Sentence Embeddings",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Peplinski, J., Berisha, V., Liss, J., Hahn, S., Shefner, J., Rutkove, S. and Shelton, K.",
+title: "(2019) Objective Assessment of Vocal Tremor",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Srivastava, G., Kadetotad, D., Yin, S., Berisha, V., Chakrabarti, C., & Seo, J. S.",
+title: "(2019) Joint Optimization of Quantization and Structured Sparsity for Compressed Deep Neural Networks",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Kadetotad, D., Berisha, V., Chakrabarti, C., & Seo, J. S.",
+title: "(2019) A 8.93-TOPS/W LSTM Recurrent Neural Network Accelerator Featuring Hierarchical Coarse-Grain Sparsity With All Parameters Stored On-Chip",
+conf:"(Conference) Proceedings of 45th European Solid State Circuits Conference (ESSCIRC)"
+}
+paper(context)
+
+
+context = {authors:"Dixit, A., Shankar, U., Spanias, A., Berisha, V., Banavar, M.",
+title: "(2018) Online Machine Learning Experiments using the new HTML5 Object Oriented Software",
+conf:"(Conference) Proceedings of Frontiers in Education Workshop"
+}
+paper(context)
+
+
+
+context = {authors:"Song, H., Willi, M., Thuagarajan, J., Berisha, V., and Spanias, A.",
+title: "(2018) Triplet network with attention for speaker diarization",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Tu, M., Grabek, A., Liss, J., Berisha V.",
+title: "(2018)  Investigating the role of L1 in automatic pronunciation evaluation of L2 speech",
+conf:"(Conference) Proceedings Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Willi, M, Borrie, S., Barrett, T., Tu, M., Berisha, V.",
+title: "(2018) A discriminative acoustic-prosodic approach for measuring local entrainment",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Wisler, A., Moon, K., and Berisha, V.",
+title: "(2018) Direct ensemble estimation of density functionals",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Jiao, Y., Tu, M., Berisha, V., and  Liss, J.",
+title: "(2018) Simulating dysarthric speech for training data augmentation in clinical speech applications",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Kadambi, P., Mohanty, A.,  Ren, H.,  Smith, J. McGuinnes, K., Holt, K.,  Furtwaengler, A.,  Slepetys, R.,  Yang, Z.,  Seo, J.,  Chae, J.,  Cao, Y. Berisha, V.",
+title: "(2018) Towards a wearable cough detector based on neural networks",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Kadambi, P., Wisler, A., Berisha, V.",
+title: "(2017) Improved Finite-Sample Estimate of a Nonparametric f-Divergence",
+conf:"(Conference) Proceedings of Asilomar Conference on Signals, Systems, and Computers"
+}
+paper(context)
+
+
+context = {authors:"Berisha, V., Liss, J., Huston, T., Wisler, A., Jiao, Y., and Eig, J.",
+title: "(2017) Float like a butterfly sting like a bee: Changes in speech preceded Parkinsonism diagnosis for Muhammad Ali",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Jiao, Y., Berisha, V., and Liss, J.",
+title: "(2017) Interpretable phonological features for clinical applications",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Tu, M., Berisha, V., and Liss, J.",
+title: "(2017) Objective assessment of pathological speech using distribution regression",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Kawabata, K., Berisha, V., Scaglione, A., LaCross, A.",
+title: "(2016) A convex model for linguistic influence in group conversations",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Jiao, Y., Tu, M., Berisha, V., & Liss, J. M.",
+title: "(2016) Accent identification by combining deep neural networks and recurrent neural networks trained on long and short term features",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Tu, M., Berisha, V., Woolf, M., Seo, J. S., and Cao, Y.",
+title: "(2016) Ranking the parameters of deep neural networks using the Fisher information",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Jiao, Y., Tu, M., Berisha, V., and Liss, J.",
+title: "(2016) Online speaking rate estimation using recurrent neural networks",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Wisler, A., Berisha, V., Wei, D., Ramamurthy, K., and Spanias, A.",
+title: "(2016) Empirically-estimable multi-class classification bounds",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Wisler, A., Berisha, V., Ramamurthy, K., Spanias, A., and Liss, J.",
+title: "(2015) Removing data with noisy responses in regression analysis",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Wisler, A., Berisha, V., Liss, J., and Spanias, A.",
+title: "(2014) Domain invariant speech features using a new divergence measure",
+conf:"(Conference) Proceedings of Spoken Language Technology Workshop (SLT)"
+}
+paper(context)
+
+context = {authors:"Berisha, V., Liss, J., *Sandoval, S., Utianski, R., & Spanias, A.",
+title: "(2014) Modeling pathological speech perception from data with similarity labels",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Berisha, V., Utianski, R., & Liss, J.",
+title: "(2013) Towards a clinical tool for automatic intelligibility assessment",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Krishnamoorthi, H., Spanias, A., Berisha, V., Kwon, H., & Thornburg, H.",
+title: "(2010) An auditory-domain based speech enhancement algorithm",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Thiagarajan, J. J., Ramamurthy, K. N., Knee, P., Spanias, A., and Berisha, V.",
+title: "(2010) Sparse representations for automatic target classification in SAR images",
+conf:"(Conference) Proceedings of ISCCP"
+}
+paper(context)
+
+context = {authors:"Kwon, H., Krishnamoorthi, H., Berisha, V., and Spanias, A.",
+title: "(2009) A sensor network for real-time acoustic scene analysis",
+conf:"(Conference) Proceedings of ISCAS"
+}
+paper(context)
+
+
+context = {authors:"Krishnamoorthi, H., Berisha, V., Spanias, A., and Kwon, H.",
+title: "(2009) Low-complexity sinusoidal component selection using loudness patterns",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Philips, S., Berisha, V., and Spanias, A.",
+title: "(2009) Energy-constrained discriminant analysis",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+</script>
+
+
+
+</ul>
+<h2 class="my-3"></h2>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+var $rows = $('#myPublications li');
+$('#search').keyup(function() {
+var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+$rows.show().filter(function() {
+var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+return text.indexOf(val) == -1;
+}).hide();
+});
+</script>
+
+  </body>
+</html>

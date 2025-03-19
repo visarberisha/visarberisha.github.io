@@ -1,0 +1,278 @@
+
+
+
+context = {authors:"Li, W., Dasarathy, G., Ramamurthy, K. and Berisha, V.",
+title:"(2022) A label efficient two-sample test",
+href:"https://arxiv.org/pdf/2111.08861.pdf",
+conf:"Proceedings of UAI"
+}
+paper(context)
+
+
+context = {authors:"Mathad, V.C., Scherer, N., Chapman, K., Liss, J. and Berisha, V.",
+title:"(2021) An Attention Model for Hypernasality Prediction in Children with Cleft Palate",
+href:"",
+conf:"Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Mathad, V.C., Mahr, T.J., Scherer, N., Chapman, K., Hustad, K.C., Liss, J. and Berisha, V.",
+title:"(2021) The impact of forced-alignment errors on automatic pronunciation evaluation",
+conf:"Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Li, W., Dasarathy, G., Ramamurthy, K.N. and Berisha, V.",
+title:"(2020) Finding the Homology of Decision Boundaries with Active Learning",
+href:"",
+conf:"Proceedings of NeurIPS"
+}
+paper(context)
+
+
+context = {authors:"Moore, M., Papreja, P., Saxon, M., Berisha, V. and Panchanathan, S.",
+title: "(2020) UncommonVoice: A Crowdsourced Dataset of Dysphonic Speech",
+conf: "Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Kadetotad, D., Meng, J., Berisha, V., Chakrabarti, C. and Seo, J.S.",
+title: "(2020) Compressing LSTM Networks with Hierarchical Coarse-Grain Sparsity",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Mathad, V.C., Chapman, K., Liss, J., Scherer, N. and Berisha, V.",
+title: "(2020) Deep Learning Based Prediction of Hypernasality for Clinical Applications",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Li, W., Dasarathy, G., & Berisha, V.",
+title: "(2020) Regularization via Structural Label Smoothing",
+conf:"(Conference) Proceedings of AISTATS"
+}
+paper(context)
+
+context = {authors:"Lubold, N., Borrie, S. A., Barrett, T. S., Willi, M., & Berisha, V.",
+title: "(2019) Do Conversational Partners Entrain on Articulatory Precision?",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Voleti, R., Woolridge, S., Liss, J. M., Milanovic, M., Bowie, C. R., & Berisha, V.",
+title: "(2019) Objective Assessment of Social Skills Using Automated Language Analysis for Identification of Schizophrenia and Bipolar Disorder",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Xiong, Y., Berisha, V., & Chakrabarti, C.",
+title: "(2019) Residual+ Capsule Networks (ResCap) for Simultaneous Single-Channel Overlapped Keyword Recognition",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Moore, M., *Saxon, M., Venkateswara, H., Berisha, V., & Panchanathan, S.",
+title: "(2019) Say what? A dataset for exploring the error patterns that two ASR engines make",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Saxon, M., Liss, J., & Berisha, V.",
+title: "(2019) Objective Measures of Plosive Nasalization in Hypernasal Speech",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Voleti, R., Liss, J. M., & Berisha, V.",
+title: "(2019) Investigating the Effects of Word Substitution Errors on Sentence Embeddings",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Peplinski, J., Berisha, V., Liss, J., Hahn, S., Shefner, J., Rutkove, S. and Shelton, K.",
+title: "(2019) Objective Assessment of Vocal Tremor",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Srivastava, G., Kadetotad, D., Yin, S., Berisha, V., Chakrabarti, C., & Seo, J. S.",
+title: "(2019) Joint Optimization of Quantization and Structured Sparsity for Compressed Deep Neural Networks",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Kadetotad, D., Berisha, V., Chakrabarti, C., & Seo, J. S.",
+title: "(2019) A 8.93-TOPS/W LSTM Recurrent Neural Network Accelerator Featuring Hierarchical Coarse-Grain Sparsity With All Parameters Stored On-Chip",
+conf:"(Conference) Proceedings of 45th European Solid State Circuits Conference (ESSCIRC)"
+}
+paper(context)
+
+
+context = {authors:"Dixit, A., Shankar, U., Spanias, A., Berisha, V., Banavar, M.",
+title: "(2018) Online Machine Learning Experiments using the new HTML5 Object Oriented Software",
+conf:"(Conference) Proceedings of Frontiers in Education Workshop"
+}
+paper(context)
+
+
+
+context = {authors:"Song, H., Willi, M., Thuagarajan, J., Berisha, V., and Spanias, A.",
+title: "(2018) Triplet network with attention for speaker diarization",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Tu, M., Grabek, A., Liss, J., Berisha V.",
+title: "(2018)  Investigating the role of L1 in automatic pronunciation evaluation of L2 speech",
+conf:"(Conference) Proceedings Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Willi, M, Borrie, S., Barrett, T., Tu, M., Berisha, V.",
+title: "(2018) A discriminative acoustic-prosodic approach for measuring local entrainment",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+context = {authors:"Wisler, A., Moon, K., and Berisha, V.",
+title: "(2018) Direct ensemble estimation of density functionals",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Jiao, Y., Tu, M., Berisha, V., and  Liss, J.",
+title: "(2018) Simulating dysarthric speech for training data augmentation in clinical speech applications",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Kadambi, P., Mohanty, A.,  Ren, H.,  Smith, J. McGuinnes, K., Holt, K.,  Furtwaengler, A.,  Slepetys, R.,  Yang, Z.,  Seo, J.,  Chae, J.,  Cao, Y. Berisha, V.",
+title: "(2018) Towards a wearable cough detector based on neural networks",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Kadambi, P., Wisler, A., Berisha, V.",
+title: "(2017) Improved Finite-Sample Estimate of a Nonparametric f-Divergence",
+conf:"(Conference) Proceedings of Asilomar Conference on Signals, Systems, and Computers"
+}
+paper(context)
+
+
+context = {authors:"Berisha, V., Liss, J., Huston, T., Wisler, A., Jiao, Y., and Eig, J.",
+title: "(2017) Float like a butterfly sting like a bee: Changes in speech preceded Parkinsonism diagnosis for Muhammad Ali",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Jiao, Y., Berisha, V., and Liss, J.",
+title: "(2017) Interpretable phonological features for clinical applications",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Tu, M., Berisha, V., and Liss, J.",
+title: "(2017) Objective assessment of pathological speech using distribution regression",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Kawabata, K., Berisha, V., Scaglione, A., LaCross, A.",
+title: "(2016) A convex model for linguistic influence in group conversations",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Jiao, Y., Tu, M., Berisha, V., & Liss, J. M.",
+title: "(2016) Accent identification by combining deep neural networks and recurrent neural networks trained on long and short term features",
+conf:"(Conference) Proceedings of Interspeech"
+}
+paper(context)
+
+
+context = {authors:"Tu, M., Berisha, V., Woolf, M., Seo, J. S., and Cao, Y.",
+title: "(2016) Ranking the parameters of deep neural networks using the Fisher information",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Jiao, Y., Tu, M., Berisha, V., and Liss, J.",
+title: "(2016) Online speaking rate estimation using recurrent neural networks",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Wisler, A., Berisha, V., Wei, D., Ramamurthy, K., and Spanias, A.",
+title: "(2016) Empirically-estimable multi-class classification bounds",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Wisler, A., Berisha, V., Ramamurthy, K., Spanias, A., and Liss, J.",
+title: "(2015) Removing data with noisy responses in regression analysis",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Wisler, A., Berisha, V., Liss, J., and Spanias, A.",
+title: "(2014) Domain invariant speech features using a new divergence measure",
+conf:"(Conference) Proceedings of Spoken Language Technology Workshop (SLT)"
+}
+paper(context)
+
+context = {authors:"Berisha, V., Liss, J., *Sandoval, S., Utianski, R., & Spanias, A.",
+title: "(2014) Modeling pathological speech perception from data with similarity labels",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Berisha, V., Utianski, R., & Liss, J.",
+title: "(2013) Towards a clinical tool for automatic intelligibility assessment",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Krishnamoorthi, H., Spanias, A., Berisha, V., Kwon, H., & Thornburg, H.",
+title: "(2010) An auditory-domain based speech enhancement algorithm",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+
+context = {authors:"Thiagarajan, J. J., Ramamurthy, K. N., Knee, P., Spanias, A., and Berisha, V.",
+title: "(2010) Sparse representations for automatic target classification in SAR images",
+conf:"(Conference) Proceedings of ISCCP"
+}
+paper(context)
+
+context = {authors:"Kwon, H., Krishnamoorthi, H., Berisha, V., and Spanias, A.",
+title: "(2009) A sensor network for real-time acoustic scene analysis",
+conf:"(Conference) Proceedings of ISCAS"
+}
+paper(context)
+
+
+context = {authors:"Krishnamoorthi, H., Berisha, V., Spanias, A., and Kwon, H.",
+title: "(2009) Low-complexity sinusoidal component selection using loudness patterns",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
+
+context = {authors:"Philips, S., Berisha, V., and Spanias, A.",
+title: "(2009) Energy-constrained discriminant analysis",
+conf:"(Conference) Proceedings of ICASSP"
+}
+paper(context)
